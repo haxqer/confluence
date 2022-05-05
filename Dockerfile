@@ -27,6 +27,6 @@ RUN mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} \
 && echo "confluence.home = ${CONFLUENCE_HOME}" > ${CONFLUENCE_INSTALL}/${ATLASSIAN_PRODUCTION}/WEB-INF/classes/confluence-init.properties
 
 WORKDIR $CONFLUENCE_INSTALL
-EXPOSE 8080
+EXPOSE 8090
 
 ENTRYPOINT ["/opt/confluence/bin/start-confluence.sh", "-fg"]
