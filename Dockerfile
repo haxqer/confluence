@@ -26,7 +26,7 @@ RUN mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} \
 && curl -o /opt/confluence/lib/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar -L \
 && echo "confluence.home = ${CONFLUENCE_HOME}" > ${CONFLUENCE_INSTALL}/${ATLASSIAN_PRODUCTION}/WEB-INF/classes/confluence-init.properties
 
- WORKDIR $CONFLUENCE_INSTALL
- EXPOSE 8080
+WORKDIR $CONFLUENCE_INSTALL
+EXPOSE 8080
 
- ENTRYPOINT ["/opt/confluence/bin/start-confluence.sh", "-fg"]
+ENTRYPOINT ["/opt/confluence/bin/start-confluence.sh", "-fg"]
