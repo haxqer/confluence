@@ -1,6 +1,6 @@
 FROM openjdk:11-stretch
 
-LABEL maintainer="haxqer <haxqer666@gmail.com>" version="7.17.0"
+LABEL maintainer="axlroden <alex@axlrod.dk>" version="7.17.0"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
@@ -29,6 +29,6 @@ RUN mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} \
 && echo "confluence.home = ${CONFLUENCE_HOME}" > ${CONFLUENCE_INSTALL}/${ATLASSIAN_PRODUCTION}/WEB-INF/classes/confluence-init.properties
 
  WORKDIR $CONFLUENCE_INSTALL
- EXPOSE 8080
+ EXPOSE 8090
 
  ENTRYPOINT ["/opt/confluence/bin/start-confluence.sh", "-fg"]
