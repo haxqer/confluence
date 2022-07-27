@@ -1,12 +1,12 @@
-FROM openjdk:11-stretch
+FROM openjdk:8-stretch
 
-LABEL maintainer="axlroden <alex@axlrod.dk>" version="7.17.0"
+LABEL maintainer="haxqer <haxqer666@gmail.com>" version="7.6.2"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
-ARG APP_VERSION=7.17.0
-ARG AGENT_VERSION=1.3.1
-ARG MYSQL_DRIVER_VERSION=8.0.28
+ARG APP_VERSION=7.6.2
+ARG AGENT_VERSION=1.2.2
+ARG MYSQL_DRIVER_VERSION=5.1.48
 
 ENV CONFLUENCE_HOME=/var/confluence \
     CONFLUENCE_INSTALL=/opt/confluence \
@@ -19,9 +19,7 @@ ENV CONFLUENCE_HOME=/var/confluence \
 ENV JAVA_OPTS="-javaagent:${AGENT_PATH}/${AGENT_FILENAME} ${JAVA_OPTS}"
 
 RUN mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} \
-&& curl -o ${AGENT_PATH}/agent.tar.gz https://gitee.com/pengzhile/atlassian-agent/attach_files/832832/download/atlassian-agent-v${AGENT_VERSION}.tar.gz -L \
-&& tar xzf ${AGENT_PATH}/agent.tar.gz -C ${AGENT_PATH}/ --strip-components 1 \
-&& rm -rf ${AGENT_PATH}/agent.tar.gz \
+&& curl -o ${AGENT_PATH}/${AGENT_FILENAME}  https://github.com/haxqer/confluence/releases/download/v${AGENT_VERSION}/atlassian-agent.jar -L \
 && curl -o /tmp/atlassian.tar.gz https://product-downloads.atlassian.com/software/confluence/downloads/atlassian-${APP_NAME}-${APP_VERSION}.tar.gz -L \
 && tar xzf /tmp/atlassian.tar.gz -C /opt/confluence/ --strip-components 1 \
 && rm -f /tmp/atlassian.tar.gz \

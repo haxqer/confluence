@@ -20,10 +20,10 @@ default port: 8090
     docker-compose up -d
 ```
 
-- default db(mysql 8.0.28) configure:
+- default db(mysql5.7) configure:
 
 ```bash
-    driver=mysql8.0.28
+    driver=mysql5.7+
     host=mysql-confluence
     port=3306
     db=confluence
@@ -69,7 +69,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-4. Paste your license
+4. Paste your license 
 
 ## Install docker & docker-compose
 - If you use `debian`, just do it.
@@ -82,7 +82,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 path : `~/.docker/config.json`
 
-content :
+content : 
 ```
 {
     "proxies": {
@@ -93,4 +93,3 @@ content :
     }
 }
 ```
-
