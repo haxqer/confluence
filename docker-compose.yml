@@ -34,6 +34,10 @@ services:
     networks:
       - network-bridge
 
+networks:
+  network-bridge:
+    driver: bridge
+
 volumes:
   home_data:
     external: false
