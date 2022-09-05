@@ -74,8 +74,8 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 ## How to upgrade
 
 ```shell
-cd confluence
-git pull haxqer/confluence:latest && docker-compose stop
+cd confluence && git pull
+docker pull haxqer/confluence:latest && docker-compose stop
 docker-compose rm
 ```
 
