@@ -69,7 +69,21 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-4. Paste your license 
+4. Paste your license
+
+## How to upgrade
+
+```shell
+cd confluence
+git pull haxqer/confluence:latest && docker-compose stop
+docker-compose rm
+```
+
+enter `y`, then start server
+
+```shell
+docker-compose up -d
+```
 
 ## Install docker & docker-compose
 - If you use `debian`, just do it.
