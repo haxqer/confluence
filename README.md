@@ -20,15 +20,15 @@ default port: 8090
     docker-compose up -d
 ```
 
-- default db(mysql5.7) configure:
+- default db(mysql8.0) configure:
 
 ```bash
-    driver=mysql5.7+
+    driver=mysql
     host=mysql-confluence
     port=3306
     db=confluence
-    user=confluence
-    passwd=123123
+    user=root
+    passwd=123456
 ```
 
 ## How to run with docker

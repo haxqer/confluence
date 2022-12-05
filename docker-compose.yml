@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   confluence:
-    image: haxqer/confluence
+    image: haxqer/confluence:7.19.4
     container_name: confluence-srv
     environment:
       - TZ=Asia/Shanghai
@@ -19,7 +19,7 @@ services:
       - network-bridge
 
   mysql:
-    image: mysql:5.7
+    image: mysql:8
     container_name: mysql-confluence
     environment:
       - TZ=Asia/Shanghai
