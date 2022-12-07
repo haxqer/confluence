@@ -36,7 +36,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.4
+    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.0.0
 ```
 
 - config your own db:
