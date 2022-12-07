@@ -1,6 +1,9 @@
 # confluence
 default port: 8090
 
+
+[Confluence 8.0.0](https://github.com/haxqer/confluence/tree/8.0.0)
+
 ## Requirement
 - docker-compose: 17.09.0+
 
