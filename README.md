@@ -11,7 +11,7 @@ default port: 8090
 ```
     git clone https://github.com/haxqer/confluence.git \
         && cd confluence \
-        && git checkout 8.0.0 \
+        && git checkout 8.0.1 \
         && docker-compose up
 ```
 
@@ -37,7 +37,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.0.0
+    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.0.1
 ```
 
 - config your own db:
