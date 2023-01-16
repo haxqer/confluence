@@ -1,9 +1,9 @@
 # confluence
-Long Term Support Version: v7(7.19.4)
+
 default port: 8090
 
-
-[Confluence v8(8.0.2)](https://github.com/haxqer/confluence/tree/v8)
++ Long Term Support Version: v7(7.19.4)
++ [Confluence v8(8.0.2)](https://github.com/haxqer/confluence/tree/v8)
 
 ## Requirement
 - docker-compose: 17.09.0+
