@@ -3,7 +3,7 @@
 default port: 8090
 
 + Long Term Support Version: v7(7.19.5)
-+ Latest Version: v8(8.0.3)(https://github.com/haxqer/confluence/tree/v8)
++ Latest Version: [v8(8.0.3)](https://github.com/haxqer/confluence/tree/v8)
 
 ## Requirement
 - docker-compose: 17.09.0+
@@ -89,25 +89,3 @@ enter `y`, then start server
 docker-compose up -d
 ```
 
-## Install docker & docker-compose
-- If you use `debian`, just do it.
-```
-    ./script/debian-install-docker.sh
-    ./script/linux-install-docker-compose.sh
-```
-
-## Set Proxy
-
-path : `~/.docker/config.json`
-
-content : 
-```
-{
-    "proxies": {
-        "default": {
-         "httpProxy": "http://ip:port",
-         "httpsProxy": "http://ip:port"
-        }
-    }
-}
-```
