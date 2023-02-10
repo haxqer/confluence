@@ -13,7 +13,7 @@ default port: 8090
 - start confluence & mysql
 
 ```
-    git clone https://github.com/haxqer/confluence.git \
+    git clone https://github.com/onegin/confluence.git \
         && cd confluence \
         && docker-compose up
 ```
@@ -51,9 +51,9 @@ default port: 8090
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p conf \
-    -m haxqer666@gmail.com \
-    -n haxqer666@gmail.com \
-    -o http://website \
+    -m Hello@world.com \
+    -n Hello@world.com \
+    -o Name You Org \
     -s you-server-id-xxxx
 ```
 
@@ -67,9 +67,9 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p eu.softwareplant.biggantt \
-    -m haxqer666@gmail.com \
-    -n haxqer666@gmail.com \
-    -o http://website \
+    -m Hello@world.com \
+    -n Hello@world.com \
+    -o Name You Org \
     -s you-server-id-xxxx
 ```
 
@@ -79,7 +79,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 ```shell
 cd confluence && git pull
-docker pull haxqer/confluence:latest && docker-compose stop
+docker pull onegin/confluence:latest && docker-compose stop
 docker-compose rm
 ```
 
