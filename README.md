@@ -3,7 +3,7 @@
 default port: 8090
 
 + Long Term Support Version: v7(7.19.5)
-+ Latest Version: [v8(8.0.3)](https://github.com/haxqer/confluence/tree/v8)
++ Latest Version: [v8(8.1.0)](https://github.com/haxqer/confluence/tree/v8)
 
 ## Requirement
 - docker-compose: 17.09.0+
