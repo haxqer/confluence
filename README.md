@@ -37,7 +37,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.1.0
+docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.1.1
 ```
 
 - config your own db:
@@ -48,9 +48,9 @@ default port: 8090
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p conf \
-    -m haxqer666@gmail.com \
-    -n haxqer666@gmail.com \
-    -o http://website \
+    -m Hello@world.com \
+    -n Hello@world.com \
+    -o your-org \
     -s you-server-id-xxxx
 ```
 
@@ -64,9 +64,9 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p eu.softwareplant.biggantt \
-    -m haxqer666@gmail.com \
-    -n haxqer666@gmail.com \
-    -o http://website \
+    -m Hello@world.com \
+    -n Hello@world.com \
+    -o your-org \
     -s you-server-id-xxxx
 ```
 
@@ -76,7 +76,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 ```shell
 cd confluence && git pull
-docker pull haxqer/confluence:latest && docker-compose stop
+docker pull haxqer/confluence:8.1.1 && docker-compose stop
 docker-compose rm
 ```
 
@@ -84,27 +84,4 @@ enter `y`, then start server
 
 ```shell
 docker-compose up -d
-```
-
-## Install docker & docker-compose
-- If you use `debian`, just do it.
-```
-    ./script/debian-install-docker.sh
-    ./script/linux-install-docker-compose.sh
-```
-
-## Set Proxy
-
-path : `~/.docker/config.json`
-
-content : 
-```
-{
-    "proxies": {
-        "default": {
-         "httpProxy": "http://ip:port",
-         "httpsProxy": "http://ip:port"
-        }
-    }
-}
 ```
