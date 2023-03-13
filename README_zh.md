@@ -1,15 +1,16 @@
 # confluence
+
 [README](README.md) | [中文文档](README_zh.md)
 
-default port: 8090
+默认端口: 8090
 
-+ Long Term Support Version: v7(7.19.6)
-+ Latest Version: [v8(8.1.1)](https://github.com/haxqer/confluence/tree/v8)
++ 长期维护的版本: v7(7.19.6)
++ 最新的版本: [v8(8.1.1)](https://github.com/haxqer/confluence/tree/v8)
 
-## Requirement
+## 环境要求
 - docker-compose: 17.09.0+
 
-## How to run with docker-compose
+## 使用 docker-compose 启动
 
 - start confluence & mysql
 
@@ -19,13 +20,13 @@ default port: 8090
         && docker-compose up
 ```
 
-- start confluence & mysql daemon
+- 以守护进程的方式启动 confluence & mysql
 
 ```
     docker-compose up -d
 ```
 
-- default db(mysql8.0) configure:
+- 默认的 数据库(mysql8.0) 配置:
 
 ```bash
     driver=mysql
@@ -36,18 +37,18 @@ default port: 8090
     passwd=123456
 ```
 
-## How to run with docker
+## 使用 docker 启动
 
-- start confluence
+- 启动 confluence
 
 ```
     docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.6
 ```
 
-- config your own db:
+- 然后配置你的数据库:
 
 
-## How to hack confluence
+## 破解 confluence
 
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
@@ -58,12 +59,12 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-## How to hack confluence plugin
+## 破解 confluence 的插件
 
-- .eg I want to use BigGantt plugin
-1. Install BigGantt from confluence marketplace.
-2. Find `App Key` of BigGantt is : `eu.softwareplant.biggantt`
-3. Execute :
+- 例如: 你想要破解 BigGantt 插件
+1. 从 confluence marketplace 中安装 BigGantt 插件
+2. 查看 BigGantt 的 `App Key` 是 : `eu.softwareplant.biggantt`
+3. 然后执行 :
 
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
@@ -74,7 +75,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-4. Paste your license
+4. 最后粘贴生成的 licence
 
 ## How to upgrade
 
