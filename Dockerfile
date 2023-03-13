@@ -1,5 +1,6 @@
 FROM openjdk:8-stretch
 
+
 LABEL maintainer="haxqer <haxqer666@gmail.com>" version="7.19.6"
 
 ARG ATLASSIAN_PRODUCTION=confluence
