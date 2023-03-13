@@ -2,8 +2,8 @@
 
 default port: 8090
 
-+ Long Term Support Version: v7(7.19.5)
-+ Latest Version: [v8(8.0.3)](https://github.com/haxqer/confluence/tree/v8)
++ Long Term Support Version: v7(7.19.6)
++ Latest Version: [v8(8.1.0)](https://github.com/haxqer/confluence/tree/v8)
 
 ## Requirement
 - docker-compose: 17.09.0+
@@ -40,7 +40,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.5
+    docker run -p 8090:8090 -v ./confluence:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.6
 ```
 
 - config your own db:
