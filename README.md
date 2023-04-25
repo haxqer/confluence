@@ -16,7 +16,7 @@ Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#iss
 ```
     git clone https://github.com/haxqer/confluence.git \
         && cd confluence \
-        && git checkout lts-zh \
+        && git checkout latest-zh \
         && docker-compose up
 ```
 

@@ -17,6 +17,7 @@
 ```
     git clone https://github.com/haxqer/confluence.git \
         && cd confluence \
+        && git checkout latest-zh \
         && docker-compose up
 ```
 

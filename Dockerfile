@@ -1,4 +1,4 @@
-FROM openjdk:21-ea-11-jdk-bullseye
+FROM openjdk:11-bullseye
 
 LABEL maintainer="haxqer <haxqer666@gmail.com>" version="8.2.1-zh"
 
