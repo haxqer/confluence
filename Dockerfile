@@ -1,11 +1,10 @@
-FROM openjdk:8-stretch
+FROM openjdk:21-ea-11-jdk-bullseye
 
-
-LABEL maintainer="haxqer <haxqer666@gmail.com>" version="7.19.8"
+LABEL maintainer="haxqer <haxqer666@gmail.com>" version="7.19.8-zh"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
-ARG APP_VERSION=7.19.8
+ARG APP_VERSION=7.19.8-zh
 ARG AGENT_VERSION=1.3.3
 ARG MYSQL_DRIVER_VERSION=8.0.22
 
@@ -20,7 +19,8 @@ ENV CONFLUENCE_HOME=/var/confluence \
 
 ENV JAVA_OPTS="-javaagent:${AGENT_PATH}/${AGENT_FILENAME} ${JAVA_OPTS}"
 
-RUN mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} ${CONFLUENCE_INSTALL}${LIB_PATH} \
+RUN apt-get update -y && apt-get install -y fonts-arphic-bkai00mp fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-arphic-ukai fonts-arphic-uming \
+&& mkdir -p ${CONFLUENCE_INSTALL} ${CONFLUENCE_HOME} ${AGENT_PATH} ${CONFLUENCE_INSTALL}${LIB_PATH} \
 && curl -o ${AGENT_PATH}/${AGENT_FILENAME}  https://github.com/haxqer/confluence/releases/download/v${AGENT_VERSION}/atlassian-agent.jar -L \
 && curl -o /tmp/atlassian.tar.gz https://product-downloads.atlassian.com/software/confluence/downloads/atlassian-${APP_NAME}-${APP_VERSION}.tar.gz -L \
 && tar xzf /tmp/atlassian.tar.gz -C /opt/confluence/ --strip-components 1 \
