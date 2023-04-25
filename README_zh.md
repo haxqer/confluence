@@ -6,7 +6,7 @@
 
 + 长期维护的版本: v7(7.19.8)
 + 最新的版本: [v8(8.2.1)](https://github.com/haxqer/confluence/tree/v8)
-+ 最新的修复中文乱码问题的版本: [v8(8.2.1-zh)](https://github.com/haxqer/confluence/tree/latest-zh) 感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16
++ 最新的修复中文乱码问题的版本: [v8(8.2.1-zh)](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## 环境要求
 - docker-compose: 17.09.0+
