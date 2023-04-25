@@ -55,7 +55,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p conf \
     -m Hello@world.com \
     -n Hello@world.com \
-    -o your-org \
+    -o http://your-domain:port \
     -s you-server-id-xxxx
 ```
 
@@ -71,7 +71,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -p eu.softwareplant.biggantt \
     -m Hello@world.com \
     -n Hello@world.com \
-    -o your-org \
+    -o http://your-domain:port \
     -s you-server-id-xxxx
 ```
 
