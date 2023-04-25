@@ -3,7 +3,7 @@
 
 default port: 8090
 
-Thanks to: [sunny1025g](https://github.com/sunny1025g) for the zh image 
+Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16)
 + Long Term Support Version: v7(7.19.8-zh)
 + Latest Version: [v8(8.1.3)](https://github.com/haxqer/confluence/tree/v8)
 

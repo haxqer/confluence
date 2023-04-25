@@ -4,7 +4,7 @@
 
 默认端口: 8090
 
-感谢: [sunny1025g](https://github.com/sunny1025g) for the zh image
+感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16)
 + 长期维护的版本: v7(7.19.8-zh)
 + 最新的版本: [v8(8.1.3)](https://github.com/haxqer/confluence/tree/v8)
 
