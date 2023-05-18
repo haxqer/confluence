@@ -3,9 +3,9 @@
 
 default port: 8090
 
-+ Long Term Support Version: v7(7.19.8)
-+ Latest Version: [v8(8.2.2)](https://github.com/haxqer/confluence/tree/v8)
-+ Latest Chinese Version: [v8(8.2.2-zh)](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
++ Long Term Support Version: v7(7.19.9)
++ Latest Version: [v8(8.2.3)](https://github.com/haxqer/confluence/tree/v8)
++ Latest Chinese Version: [v8(8.2.3-zh)](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## Requirement
 - docker-compose: 17.09.0+
@@ -42,7 +42,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.8
+    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.9
 ```
 
 - config your own db:
