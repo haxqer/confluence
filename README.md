@@ -4,7 +4,7 @@
 default port: 8090
 
 Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16)
-+ Latest `zh` Version: v8(8.2.2-zh)
++ Latest `zh` Version: v8(8.2.3-zh)
 
 ## Requirement
 - docker-compose: 17.09.0+
@@ -42,7 +42,7 @@ Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#iss
 - start confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.2.2-zh
+    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.2.3-zh
 ```
 
 - config your own db:
