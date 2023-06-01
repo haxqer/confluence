@@ -77,6 +77,20 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 4. Paste your license
 
+## `Datacenter` license
+
+Generate `datacenter` license by adding `-d` parameter.
+
+```
+docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
+    -d \
+    -p conf \
+    -m Hello@world.com \
+    -n Hello@world.com \
+    -o your-org \
+    -s you-server-id-xxxx
+```
+
 ## How to upgrade
 
 ```shell
