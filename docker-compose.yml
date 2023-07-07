@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   confluence:
-    image: haxqer/confluence:8.3.2
+    image: haxqer/confluence:8.4.0
     container_name: confluence-srv
     environment:
       - TZ=Asia/Shanghai

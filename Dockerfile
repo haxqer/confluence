@@ -1,10 +1,10 @@
 FROM openjdk:11-bullseye
 
-LABEL maintainer="haxqer <haxqer666@gmail.com>" version="8.3.2"
+LABEL maintainer="haxqer <haxqer666@gmail.com>" version="8.4.0"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
-ARG APP_VERSION=8.3.2
+ARG APP_VERSION=8.4.0
 ARG AGENT_VERSION=1.3.3
 ARG MYSQL_DRIVER_VERSION=8.0.22
 
