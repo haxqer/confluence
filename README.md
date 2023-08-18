@@ -4,7 +4,7 @@
 default port: 8090
 
 + Long Term Support Version: v7(7.19.12)
-+ Latest Version: [v8(8.4.1)](https://github.com/haxqer/confluence/tree/v8)
++ Latest Version: [v8](https://github.com/haxqer/confluence/tree/v8)
 + Latest Chinese Version: [v8](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## Requirement
