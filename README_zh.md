@@ -4,8 +4,7 @@
 
 默认端口: 8090
 
-+ 长期维护的版本: v7(7.19.12)
-+ 最新的版本: [v8(8.4.1)](https://github.com/haxqer/confluence/tree/v8)
++ 长期维护的版本: v8(8.5.1)
 + 最新的修复中文乱码问题的版本: [v8](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## 环境要求
@@ -43,7 +42,7 @@
 - 启动 confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:7.19.12
+    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.5.1
 ```
 
 - 然后配置你的数据库:
