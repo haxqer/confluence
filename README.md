@@ -15,26 +15,26 @@ default port: 8090
 - start confluence & mysql
 
 ```
-    git clone https://github.com/haxqer/confluence.git \
-        && cd confluence \
-        && docker-compose up
+git clone https://github.com/haxqer/confluence.git \
+    && cd confluence \
+    && docker-compose up
 ```
 
 - start confluence & mysql daemon
 
 ```
-    docker-compose up -d
+docker-compose up -d
 ```
 
 - default db(mysql8.0) configure:
 
 ```bash
-    driver=mysql
-    host=mysql-confluence
-    port=3306
-    db=confluence
-    user=root
-    passwd=123456
+driver=mysql
+host=mysql-confluence
+port=3306
+db=confluence
+user=root
+passwd=123456
 ```
 
 ## How to run with docker
@@ -42,7 +42,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.6.1
+docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.6.1
 ```
 
 - config your own db:
