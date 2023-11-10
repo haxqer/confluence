@@ -3,7 +3,7 @@
 
 default port: 8090
 
-+ Latest Version: v8(8.5.2)
++ Latest Version: v8(8.6.1)
 + Latest Chinese Version: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## Requirement
@@ -41,7 +41,7 @@ default port: 8090
 - start confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.5.2
+    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.6.1
 ```
 
 - config your own db:
@@ -51,6 +51,7 @@ default port: 8090
 
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
+    -d \
     -p conf \
     -m Hello@world.com \
     -n Hello@world.com \
@@ -67,6 +68,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
+    -d \
     -p eu.softwareplant.biggantt \
     -m Hello@world.com \
     -n Hello@world.com \
@@ -76,19 +78,6 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 4. Paste your license
 
-## `Datacenter` license
-
-Generate `datacenter` license by adding `-d` parameter.
-
-```
-docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
-    -d \
-    -p conf \
-    -m Hello@world.com \
-    -n Hello@world.com \
-    -o your-org \
-    -s you-server-id-xxxx
-```
 
 ## How to upgrade
 
