@@ -5,6 +5,7 @@
 默认端口: 8090
 
 + 最新版本: v8(8.6.1)
++ 长期维护的版本: v8(8.5.3)
 + 最新的修复中文乱码问题的版本: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## 环境要求

@@ -4,6 +4,7 @@
 default port: 8090
 
 + Latest Version: v8(8.6.1)
++ LTS Version: v8(8.5.3)
 + Latest Chinese Version: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## Requirement
