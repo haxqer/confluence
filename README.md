@@ -1,4 +1,9 @@
 # confluence
+
+Please be sure to upgrade to the latest version(8.6.1 or 8.5.3), as this bug:
+https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html
+
+
 [README](README.md) | [中文文档](README_zh.md)
 
 default port: 8090
