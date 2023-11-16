@@ -1,7 +1,13 @@
 # confluence
 
-请务必升级到最新版(8.6.1 或者 8.5.3)，因为 confluence 的这个bug:
-https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html
+---
+请务必升级到最新版(8.6.1 或者 8.5.3)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
+
+相关的 issues:
++ [#38](https://github.com/haxqer/confluence/issues/38)
++ [#39](https://github.com/haxqer/confluence/issues/39)
+
+---
 
 [README](README.md) | [中文文档](README_zh.md)
 
