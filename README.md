@@ -1,19 +1,20 @@
 # confluence
 
 ---
-Please be sure to upgrade to the latest version(8.6.1 or 8.5.3), as this [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
+Please be sure to upgrade to the latest version(8.7.1 or 8.5.4), as this [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 
 Related issues:
 + [#38](https://github.com/haxqer/confluence/issues/38)
 + [#39](https://github.com/haxqer/confluence/issues/39)
++ [#46](https://github.com/haxqer/confluence/issues/46) (Thanks to: [pldavid2](https://github.com/pldavid2))
 
 ---
 [README](README.md) | [中文文档](README_zh.md)
 
 default port: 8090
 
-+ Latest Version: v8(8.6.1)
-+ LTS Version: v8(8.5.3)
++ Latest Version: v8(8.7.1)
++ LTS Version: v8(8.5.4)
 + Latest Chinese Version: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
 ## Requirement
@@ -51,7 +52,7 @@ passwd=123456
 - start confluence
 
 ```
-docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.6.1
+docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.7.1
 ```
 
 - config your own db:
