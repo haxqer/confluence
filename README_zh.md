@@ -1,5 +1,6 @@
 # confluence
 
+新的Confluence/Jira版本仅支持数据中心许可证
 ---
 请务必升级到最新版(8.7.1 或者 8.5.4)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 

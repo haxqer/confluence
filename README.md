@@ -1,5 +1,8 @@
 # confluence
 
+
+New Confluence/Jira releases support only Data Center licenses. To generate a Data Center licenses, add the `-d` parameter.
+
 ---
 Please be sure to upgrade to the latest version(8.7.1 or 8.5.4), as this [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 
