@@ -1,0 +1,72 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: "confluence"
+      args:
+        CONFLUENCE_VERSION: ${CONFLUENCE_VERSION}
+        IMAGE_PREFIX: ${IMAGE_PREFIX:-''}
+    image: xsharp/confluence:${CONFLUENCE_VERSION}
+    container_name: confluence-app
+    hostname: "confluenceapp"
+    working_dir: "/opt/atlassian/confluence"
+    depends_on:
+      - db
+    ports:
+      - "8090:8090"
+      - "8091:8091"
+    volumes:
+      - ../data/confluence:/var/atlassian/application-data/confluence
+    restart: always
+    env_file:
+      - ./.env
+    environment:
+      - TZ='Asia/Shanghai'
+      - JVM_MINIMUM_MEMORY=${JVM_MINIMUM_MEMORY}
+      - JVM_MAXIMUM_MEMORY=${JVM_MAXIMUM_MEMORY}
+      - JVM_RESERVED_CODE_CACHE_SIZE=${JVM_RESERVED_CODE_CACHE_SIZE}
+      
+      # - ATL_PROXY_NAME=${ATL_PROXY_NAME}
+      # - ATL_PROXY_PORT=${ATL_PROXY_PORT}
+      # - ATL_TOMCAT_SCHEME=${ATL_TOMCAT_SCHEME}
+      # - ATL_TOMCAT_SECURE=${ATL_TOMCAT_SECURE}
+        
+      # - HTTP_PROXY=${HTTP_PROXY}
+      # - HTTPS_PROXY=${HTTPS_PROXY}
+      # - NO_PROXY=${NO_PROXY}
+    networks:
+      - confluence
+
+  db:
+    image: mysql:${MYSQL_VERSION}
+    container_name: confluence-mysql
+    hostname: "confluencemysql"
+    environment:
+      - TZ='Asia/Shanghai'
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    cap_add:
+      - SYS_NICE # CAP_SYS_NICE
+    command:
+      [
+        'mysqld',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_bin',
+        '--transaction-isolation=READ-COMMITTED',
+        '--innodb_log_file_size=256M',
+        '--max_allowed_packet=256M',
+        '--log_bin_trust_function_creators=1',
+        '--skip-log-bin'
+      ]
+    volumes:
+      - ../data/mysql:/var/lib/mysql
+    restart: always
+    networks:
+      - confluence
+
+networks:
+  confluence:
+    driver: bridge
