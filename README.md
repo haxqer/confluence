@@ -1,4 +1,8 @@
+# Confluence
 
+All code and docs by [xsharp](https://github.com/xsharp).
+
+---
 参考 jira 文档: https://github.com/haxqer/jira/tree/build-your-own
 
 升级：
