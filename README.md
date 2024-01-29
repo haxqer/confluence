@@ -1,4 +1,6 @@
 
+参考 jira 文档: https://github.com/haxqer/jira/tree/build-your-own
+
 升级：
 修改 docker/.env 中的版本号（如果兼容的话）。
 
