@@ -4,7 +4,7 @@
 New Confluence/Jira releases support only Data Center licenses. To generate a Data Center licenses, add the `-d` parameter.
 
 ---
-Please be sure to upgrade to the latest version(8.7.2 or 8.5.5), as this [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
+Please be sure to upgrade to the latest version(8.8.1 or 8.5.7), as this [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 
 Related issues:
 + [#38](https://github.com/haxqer/confluence/issues/38)
@@ -16,8 +16,8 @@ Related issues:
 
 default port: 8090
 
-+ Latest Version: v8(8.7.2)
-+ LTS Version: v8(8.5.5)
++ Latest Version: v8(8.8.1)
++ LTS Version: v8(8.5.7)
 + [The new way](https://github.com/haxqer/confluence/tree/build-your-own) of use allows you to conveniently upgrade and modify parameters on your own, and it offers convenient support for HTTPS (thanks to [xsharp](https://github.com/xsharp)).
 + Latest Chinese Version: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
@@ -56,7 +56,7 @@ passwd=123456
 - start confluence
 
 ```
-docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.7.2
+docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:8.8.1
 ```
 
 - config your own db:
