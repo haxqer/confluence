@@ -1,4 +1,4 @@
-FROM openjdk:11-bullseye
+FROM openjdk:17-bullseye
 
 LABEL maintainer="haxqer <haxqer666@gmail.com>" version="9.0.1"
 
@@ -10,9 +10,9 @@ ARG MYSQL_DRIVER_VERSION=8.0.22
 
 ENV CONFLUENCE_HOME=/var/confluence \
     CONFLUENCE_INSTALL=/opt/confluence \
-    JVM_MINIMUM_MEMORY=1g \
-    JVM_MAXIMUM_MEMORY=3g \
-    JVM_CODE_CACHE_ARGS='-XX:InitialCodeCacheSize=1g -XX:ReservedCodeCacheSize=2g' \
+    JVM_MINIMUM_MEMORY=2g \
+    JVM_MAXIMUM_MEMORY=8g \
+    JVM_CODE_CACHE_ARGS='-XX:InitialCodeCacheSize=2g -XX:ReservedCodeCacheSize=4g' \
     AGENT_PATH=/var/agent \
     AGENT_FILENAME=atlassian-agent.jar \
     LIB_PATH=/confluence/WEB-INF/lib
