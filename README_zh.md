@@ -3,7 +3,7 @@
 新的Confluence/Jira版本仅支持数据中心许可证
 
 ---
-请务必升级到最新版(9.0.1 或者 8.5.12)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
+请务必升级到最新版(9.0.1 或者 8.5.14)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 
 相关的 issues:
 + [#38](https://github.com/haxqer/confluence/issues/38)
@@ -16,7 +16,7 @@
 默认端口: 8090
 
 + 最新版本(arm64&amd64): v8(8.9.5) v9(9.0.1)
-+ 长期维护的版本(arm64&amd64): v8(8.5.12)
++ 长期维护的版本(arm64&amd64): v8(8.5.14)
 + [新的使用方式](https://github.com/haxqer/confluence/tree/build-your-own) ，您可方便自行升级、修改各参数，支持https (感谢 [xsharp](https://github.com/xsharp)).
 + 最新的修复中文乱码问题的版本: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
