@@ -3,7 +3,7 @@
 新的Confluence/Jira版本仅支持数据中心许可证
 
 ---
-请务必升级到最新版(9.1.0 或者 8.5.16)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
+请务必升级到最新版(9.2.0 或者 8.5.18)，因为 confluence 的这个 [bug](https://confluence.atlassian.com/security/cve-2023-22518-improper-authorization-vulnerability-in-confluence-data-center-and-server-1311473907.html).
 
 相关的 issues:
 + [#38](https://github.com/haxqer/confluence/issues/38)
@@ -15,8 +15,8 @@
 
 默认端口: 8090
 
-+ 最新版本(arm64&amd64): v8(8.9.7) v9(9.1.0)
-+ 长期维护的版本(arm64&amd64): v8(8.5.16)
++ 最新版本(arm64&amd64): v8(8.9.7) v9(9.2.0)
++ 长期维护的版本(arm64&amd64): v8(8.5.18)
 + [新的使用方式](https://github.com/haxqer/confluence/tree/build-your-own) ，您可方便自行升级、修改各参数，支持https (感谢 [xsharp](https://github.com/xsharp)).
 + 最新的修复中文乱码问题的版本: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
 
@@ -55,7 +55,7 @@
 - 启动 confluence
 
 ```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:9.1.0
+    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:9.2.0
 ```
 
 - 然后配置你的数据库:

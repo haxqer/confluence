@@ -1,17 +1,17 @@
 FROM openjdk:17-bullseye
 
-LABEL maintainer="haxqer <haxqer666@gmail.com>" version="9.1.0"
+LABEL maintainer="haxqer <haxqer666@gmail.com>" version="9.2.0"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
-ARG APP_VERSION=9.1.0
+ARG APP_VERSION=9.2.0
 ARG AGENT_VERSION=1.3.3
 ARG MYSQL_DRIVER_VERSION=8.0.22
 
 ENV CONFLUENCE_HOME=/var/confluence \
     CONFLUENCE_INSTALL=/opt/confluence \
-    JVM_MINIMUM_MEMORY=2g \
-    JVM_MAXIMUM_MEMORY=8g \
+    JVM_MINIMUM_MEMORY=4g \
+    JVM_MAXIMUM_MEMORY=16g \
     JVM_CODE_CACHE_ARGS='-XX:InitialCodeCacheSize=2g -XX:ReservedCodeCacheSize=4g' \
     AGENT_PATH=/var/agent \
     AGENT_FILENAME=atlassian-agent.jar \
