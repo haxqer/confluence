@@ -15,7 +15,7 @@
 
 默认端口: 8090
 
-+ 最新版本(arm64&amd64): v8(8.9.7) v9(9.2.0)
++ 最新版本(arm64&amd64): v8(8.9.8) v9(9.2.0)
 + 长期维护的版本(arm64&amd64): v8(8.5.18)
 + [新的使用方式](https://github.com/haxqer/confluence/tree/build-your-own) ，您可方便自行升级、修改各参数，支持https (感谢 [xsharp](https://github.com/xsharp)).
 + 最新的修复中文乱码问题的版本: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (感谢: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )

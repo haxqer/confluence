@@ -16,7 +16,7 @@ Related issues:
 
 default port: 8090
 
-+ Latest Version(arm64&amd64): v8(8.9.7) v9(9.2.0)
++ Latest Version(arm64&amd64): v8(8.9.8) v9(9.2.0)
 + LTS Version:(arm64&amd64) v8(8.5.18)
 + [The new way](https://github.com/haxqer/confluence/tree/build-your-own) of use allows you to conveniently upgrade and modify parameters on your own, and it offers convenient support for HTTPS (thanks to [xsharp](https://github.com/xsharp)).
 + Latest Chinese Version: [v7](https://github.com/haxqer/confluence/tree/latest-zh) (Thanks to: [sunny1025g](https://github.com/sunny1025g) for the `zh` image. [#issues/16](https://github.com/haxqer/confluence/issues/16) )
