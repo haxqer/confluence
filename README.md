@@ -64,6 +64,8 @@ docker volume create confluence_home_data && docker network create confluence-ne
 
 ## How to hack confluence
 
+- After installing the Confluence docker container you will encounter the license page and copy your server-id and keep it for the hack sections. 
+
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -d \
@@ -74,12 +76,14 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-## How to hack confluence plugin
+## How to install and hack confluence plugins
 
 - .eg I want to use BigGantt plugin
-1. Install BigGantt from confluence marketplace.
-2. Find `App Key` of BigGantt is : `eu.softwareplant.biggantt`
-3. Execute :
+1. Go to [Atlassian Marketplace](https://marketplace.atlassian.com/) and find the plugin and choose the "Data Center" version and download the file from resources section.
+2. Go to Confluence administration settings and select "Manage Apps" (optional: For better web load of this section to see installed apps without lag, select the setting at the bottom of this page and uncheck "Connect to the Atlassian Marketplace").
+3. For installing BigGantt choose the "Upload app" from "Manage Apps" and upload the downloaded file, the plugin will be installed.
+4. Find the `App Key` of BigGantt from app details section of installed apps : `eu.softwareplant.biggantt`
+5. Execute :
 
 ```
 docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
@@ -107,4 +111,3 @@ enter `y`, then start server
 ```shell
 docker-compose up -d
 ```
-
