@@ -1,6 +1,6 @@
 FROM openjdk:11-bullseye
 
-LABEL maintainer="haxqer <haxqer666@gmail.com>" version="8.5.20"
+LABEL maintainer="haxqer <haxqer666@gmail.com>" version="8.5.23"
 
 ARG ATLASSIAN_PRODUCTION=confluence
 ARG APP_NAME=confluence
